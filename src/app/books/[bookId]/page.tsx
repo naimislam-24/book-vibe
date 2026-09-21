@@ -1,3 +1,5 @@
+import ReadButton from "@/app/components/bookDetails/ReadButton";
+import WishListButton from "@/app/components/bookDetails/WishListButton";
 import { IBook } from "@/app/types/Books.type";
 import Image from "next/image";
 
@@ -47,7 +49,7 @@ const BookDetailPage = async ({ params }: IBookDetailPageProps) => {
 
     <section className="container mx-auto mt-12">
       <div className="card lg:card-side bg-base-100 shadow-xl border border-gray-200 overflow-hidden">
-        <figure className="lg:w-1/2">
+        <figure className="lg:w-1/2 h-200">
           <Image
             src={book.image}
             alt={book.bookName}
@@ -107,8 +109,8 @@ const BookDetailPage = async ({ params }: IBookDetailPageProps) => {
 
           {/* Button */}
           <div className="card-actions mt-4">
-            <button className="btn btn-primary">Read</button>
-            <button className="btn btn-primary">WishList</button>
+            <ReadButton book={book} />
+            <WishListButton book={book} />
           </div>
         </div>
       </div>
