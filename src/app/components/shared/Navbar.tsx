@@ -69,7 +69,7 @@ const Navbar = () => {
               <Link href="/listed-books">Listed Books</Link>
             </li>
             <li>
-              <a>Item 3</a>
+              <Link href="/read-books">Book Vibe</Link>
             </li>
           </ul>
         </div>
